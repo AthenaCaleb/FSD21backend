@@ -1,5 +1,9 @@
 # Internal Knowledge Base Management System - Backend
 
+RENDER:
+https://knowledge-base-backend-ij7j.onrender.com/
+
+
 A Node.js/Express backend API for managing knowledge articles with role-based access control and approval workflow.
 
 ## Project Overview
