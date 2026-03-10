@@ -2,11 +2,11 @@
 
 A Node.js/Express backend API for managing knowledge articles with role-based access control and approval workflow.
 
-## 📋 Project Overview
+## Project Overview
 
 This backend system allows contributors to submit knowledge articles and administrators to control publication. Articles must be approved by an admin before they become publicly visible, ensuring quality control.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Runtime**: Node.js
 - **Framework**: Express.js
@@ -15,7 +15,7 @@ This backend system allows contributors to submit knowledge articles and adminis
 - **Password Hashing**: bcrypt
 - **Environment Variables**: dotenv
 
-## 👥 User Roles and Permissions
+## User Roles and Permissions
 
 ### CONTRIBUTOR
 - Register and log in to the system
@@ -29,14 +29,14 @@ This backend system allows contributors to submit knowledge articles and adminis
 - Approve or reject articles for publishing
 - View all pending articles
 
-## 🔐 Authentication & Authorization
+## Authentication & Authorization
 
 - JWT-based authentication with HTTP-only cookies
 - All API endpoints (except registration and published articles) require authentication
 - Role-based access control enforced at middleware level
 - Passwords are hashed using bcrypt before storage
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Authentication Routes (`/api/v1/auth`)
 
@@ -60,7 +60,7 @@ This backend system allows contributors to submit knowledge articles and adminis
 | PUT | `/:id/reject` | Admin | Reject an article |
 | GET | `/:id` | Protected | Get article by ID (with authorization check) |
 
-## 📊 Database Schema
+## Database Schema
 
 ### User Collection
 
@@ -88,7 +88,7 @@ This backend system allows contributors to submit knowledge articles and adminis
 }
 ```
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 
@@ -141,7 +141,7 @@ This backend system allows contributors to submit knowledge articles and adminis
    {"msg": "Knowledge Base API Server is running on port 8080"}
    ```
 
-## 🔄 Workflow Example
+## Workflow Example
 
 ### 1. Register Users
 
@@ -208,9 +208,9 @@ Cookie: token=<admin_jwt_token>
 GET /api/v1/articles/published
 ```
 
-## 🔒 Business Rules
+## Business Rules
 
-⚠️ **Critical**: Articles must be approved before they can be published or viewed publicly.
+**Critical**: Articles must be approved before they can be published or viewed publicly.
 
 - Newly created articles have status `pending`
 - Only approved articles are visible via `/api/v1/articles/published`
@@ -218,7 +218,7 @@ GET /api/v1/articles/published
 - Admins can view all pending articles for review
 - Unapproved articles are not visible to other users
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 D:\FSDproject\
@@ -245,7 +245,7 @@ D:\FSDproject\
 └── README.md           # This file
 ```
 
-## 🔧 Development
+## Development
 
 - **Nodemon**: Auto-reloads server on file changes
 - **ES6 Modules**: Using `import/export` syntax
@@ -259,7 +259,7 @@ D:\FSDproject\
 - **Frontend**: TBD
 - **Backend**: TBD
 
-## 🤝 Contributing
+## Contributing
 
 This is an assignment project for demonstrating full-stack development skills with focus on:
 - Approval workflow enforcement
@@ -267,6 +267,6 @@ This is an assignment project for demonstrating full-stack development skills wi
 - JWT authentication
 - End-to-end execution
 
-## 📄 License
+## License
 
 ISC
